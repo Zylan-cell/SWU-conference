@@ -1,6 +1,6 @@
 
 import { MetaProvider, Title } from "@solidjs/meta";
-import { A, Route, Router } from "@solidjs/router";
+import { Route, Router } from "@solidjs/router";
 import { Suspense } from "solid-js";
 import LanguageSwitcher from "./components/LanguageSwitcher";
 import { LangProvider } from "./lib/lang";
@@ -13,6 +13,10 @@ import Location from "./routes/location";
 import NotFound from "./routes/[...404]";
 import "./app.css";
 
+const basePath = import.meta.env.BASE_URL.replace(/\/$/, "");
+const routeHref = (path: string) => `${basePath}/${path}`;
+const homeHref = `${basePath}/`;
+
 export default function App() {
   return (
     <Router
@@ -23,24 +27,24 @@ export default function App() {
             <Title>SolidStart</Title>
             <header class="site-header">
               <nav class="site-nav">
-                <A class="navLink" href="">
+                <a class="navLink" href={homeHref}>
                   Начало
-                </A>
-                <A class="navLink" href="structure">
+                </a>
+                <a class="navLink" href={routeHref("structure")}>
                   Организационна структура
-                </A>
-                <A class="navLink" href="topics">
+                </a>
+                <a class="navLink" href={routeHref("topics")}>
                   Основни теми на конференцията
-                </A>
+                </a>
 
                 <img class="navLogo navLogoBig" src={logoUniv} alt="SWU logo" />
 
-                <A class="navLink" href="authors">
+                <a class="navLink" href={routeHref("authors")}>
                   За авторите
-                </A>
-                <A class="navLink" href="location">
+                </a>
+                <a class="navLink" href={routeHref("location")}>
                   Местоположение
-                </A>
+                </a>
                 <a
                   class="navLink navLinkAccent"
                   href="https://docs.google.com/forms/d/e/1FAIpQLScX2LXIdVwF6hW1FGtUdVBVC6rhiPOtOpc9YypDN0oPOiltpA/viewform?usp=header"
