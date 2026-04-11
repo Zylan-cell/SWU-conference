@@ -1,6 +1,6 @@
 
 import { MetaProvider, Title } from "@solidjs/meta";
-import { Route, Router } from "@solidjs/router";
+import { A, Route, Router } from "@solidjs/router";
 import { Suspense } from "solid-js";
 import LanguageSwitcher from "./components/LanguageSwitcher";
 import { LangProvider } from "./lib/lang";
@@ -16,30 +16,31 @@ import "./app.css";
 export default function App() {
   return (
     <Router
+      base={import.meta.env.BASE_URL}
       root={props => (
         <MetaProvider>
           <LangProvider>
             <Title>SolidStart</Title>
             <header class="site-header">
               <nav class="site-nav">
-                <a class="navLink" href="/">
+                <A class="navLink" href="/">
                   Начало
-                </a>
-                <a class="navLink" href="/structure">
+                </A>
+                <A class="navLink" href="/structure">
                   Организационна структура
-                </a>
-                <a class="navLink" href="/topics">
+                </A>
+                <A class="navLink" href="/topics">
                   Основни теми на конференцията
-                </a>
+                </A>
 
                 <img class="navLogo navLogoBig" src={logoUniv} alt="SWU logo" />
 
-                <a class="navLink" href="/authors">
+                <A class="navLink" href="/authors">
                   За авторите
-                </a>
-                <a class="navLink" href="/location">
+                </A>
+                <A class="navLink" href="/location">
                   Местоположение
-                </a>
+                </A>
                 <a
                   class="navLink navLinkAccent"
                   href="https://docs.google.com/forms/d/e/1FAIpQLScX2LXIdVwF6hW1FGtUdVBVC6rhiPOtOpc9YypDN0oPOiltpA/viewform?usp=header"
