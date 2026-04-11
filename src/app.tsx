@@ -23,22 +23,22 @@ export default function App() {
             <Title>SolidStart</Title>
             <header class="site-header">
               <nav class="site-nav">
-                <A class="navLink" href="/">
+                <A class="navLink" href="">
                   Начало
                 </A>
-                <A class="navLink" href="/structure">
+                <A class="navLink" href="structure">
                   Организационна структура
                 </A>
-                <A class="navLink" href="/topics">
+                <A class="navLink" href="topics">
                   Основни теми на конференцията
                 </A>
 
                 <img class="navLogo navLogoBig" src={logoUniv} alt="SWU logo" />
 
-                <A class="navLink" href="/authors">
+                <A class="navLink" href="authors">
                   За авторите
                 </A>
-                <A class="navLink" href="/location">
+                <A class="navLink" href="location">
                   Местоположение
                 </A>
                 <a
