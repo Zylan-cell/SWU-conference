@@ -151,6 +151,60 @@ a:hover {
   font-size: 1.1rem;
 }
 
+.authors-page {
+  text-align: left;
+}
+
+.authors-page h1 {
+  text-align: center;
+}
+
+.authors-content {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.authors-content h2 {
+  margin-top: 2.25rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.5rem;
+  color: var(--text);
+}
+
+.authors-content p {
+  max-width: none;
+  margin: 0.75rem 0;
+}
+
+.authors-downloads {
+  display: grid;
+  gap: 0.75rem;
+  margin: 1rem 0 1.25rem;
+}
+
+.authors-download {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.9rem;
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #fff;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.authors-download span {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.authors-download:hover {
+  border-color: #bfdbfe;
+  background: #eff6ff;
+}
+
 /* Слайдер на всю ширину */
 .hero-container {
   width: 100%;
@@ -249,7 +303,30 @@ a:hover {
   text-align: left;
   display: grid;
   gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-areas:
+    "about about"
+    "history accreditation";
+  align-items: start;
+}
+
+.univBlock--history {
+  grid-area: history;
+}
+
+.univBlock--accreditation {
+  grid-area: accreditation;
+}
+
+.univBlock--about {
+  grid-area: about;
+  justify-self: center;
+  max-width: 860px;
+  width: 100%;
+}
+
+.univBlock--about p {
+  max-width: 70ch;
 }
 
 .univBlock {
@@ -394,7 +471,11 @@ a:hover {
   }
 
   .univInfo {
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas:
+      "about about"
+      "history accreditation";
+    gap: 1.2rem;
   }
 
   .locationMap {
@@ -425,6 +506,15 @@ a:hover {
 .separatorLabel img {
   height: 42px;
   width: auto;
+}
+
+.creatorNote {
+  margin: 1rem auto 0;
+  max-width: 42rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  text-align: center;
 }
 
 /* Адаптивность */
@@ -497,6 +587,17 @@ a:hover {
     line-height: 1.65;
   }
 
+  .authors-content h2 {
+    font-size: 1.25rem;
+    margin-top: 1.6rem;
+  }
+
+  .authors-download {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
   .hero-container {
     height: 42vh;
     min-height: 280px;
@@ -524,7 +625,19 @@ a:hover {
   .univInfo {
     margin-top: 2.25rem;
     grid-template-columns: 1fr;
+    grid-template-areas:
+      "about"
+      "history"
+      "accreditation";
     gap: 1rem;
+  }
+
+  .univBlock--about,
+  .univBlock--history,
+  .univBlock--accreditation {
+    grid-area: auto;
+    max-width: none;
+    justify-self: stretch;
   }
 
   .univBlock {
@@ -577,6 +690,11 @@ a:hover {
   .separatorLabel img {
     height: 34px;
   }
+
+  .creatorNote {
+    font-size: 0.9rem;
+    margin-top: 0.85rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -612,6 +730,11 @@ a:hover {
 
   .page p {
     font-size: 0.96rem;
+  }
+
+  .authors-download {
+    padding: 0.75rem 0.85rem;
+    font-size: 0.92rem;
   }
 
   .hero-container {
@@ -651,6 +774,10 @@ a:hover {
 
   .separatorLabel img {
     height: 30px;
+  }
+
+  .creatorNote {
+    font-size: 0.84rem;
   }
 
   .lang-buttons button {

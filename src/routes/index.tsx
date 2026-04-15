@@ -16,12 +16,14 @@ const content = {
     sectionTitle1: "За университета",
     sectionTitle2: "Акредитация",
     sectionTitle3: "Кратка история",
+    creatorNote:
+      "Сайтът е създаден от Тимофий Пригуза, студент в ЮЗУ \"Неофит Рилски\", специалност ИКТ, 4 курс бакалавър (към момента).",
     highlight:
-      "Югозападният университет „Неофит Рилски“ е основан през 1976 г. в Благоевград. Той е сред водещите класически университети в страната.",
+      "Югозападният университет \"Неофит Рилски\" е основан през 1976 г. в Благоевград. Той е сред водещите класически университети в страната.",
     accreditation:
       "Със своята 45-годишна история ЮЗУ „Неофит Рилски“ завоюва своето място в научното и образователно пространство на България и Югоизточна Европа. Университетът е акредитиран с максимална оценка от Националната агенция за оценяване и акредитация, което е гаранция за качество на образователната услуга в 81 бакалавърски и магистърски програми след средно образование, 153 магистърски програми след завършено висше образование и 83 докторски програми. Обучението се провежда в 30 професионални направления в областта на хуманитарните, техническите, природните, управленските, социалните, педагогическите, правните и икономическите науки, изкуствата, здравните грижи, общественото здраве и спорта, сигурността и отбраната и др. По този показател университетът е на първо място в страната.",
     history:
-      "Университетът в Благоевград, чийто патрон е патриархът на съвременното българско образование Неофит Рилски, започва своята история като филиал на Софийския университет „Свети Климент Охридски“ със Заповед № 323 от 9 август 1975 г. на Бюрото на Министерския съвет (Държавен вестник, бр. 65 от 1975 г.). Първите 200 студенти са приети през учебната 1976/1977 година в две специалности – „Педагогика за подготовка на учители в детски градини“ и „Педагогика за подготовка на начални учители“. Така за първи път в България започва университетско образование за учители в детски градини и начални училища. Обучението се осъществява от трима професори, двама доценти и тринадесет асистенти.",
+      "Университетът в Благоевград, чийто патрон е патриархът на съвременното българско образование Неофит Рилски, започва своята история като филиал на Софийския университет \"Свети Климент Охридски\" със Заповед № 323 от 9 август 1975 г. на Бюрото на Министерския съвет (Държавен вестник, бр. 65 от 1975 г.). Първите 200 студенти са приети през учебната 1976/1977 година в две специалности – \"Педагогика за подготовка на учители в детски градини\" и \"Педагогика за подготовка на начални учители\". Така за първи път в България започва университетско образование за учители в детски градини и начални училища. Обучението се осъществява от трима професори, двама доценти и тринадесет асистенти.",
   },
   en: {
     title: "Home",
@@ -30,15 +32,17 @@ const content = {
     sectionTitle1: "About the university",
     sectionTitle2: "Accreditation",
     sectionTitle3: "Brief history",
+    creatorNote:
+      "This website was created by Timofiy Prihuza, a 4th-year bachelor student (at the time) in ICT at South-West University \"Neofit Rilski\".",
     highlight:
-      "South-West University ‘Neofit Rilski’ was founded in 1976 in Blagoevgrad. It is one of the leading classical universities in the country. With its 45-year history, SWU has secured its place in the scientific and educational space of Bulgaria and Southeast Europe.",
+      "The Southwestern University \"Neofit Rilski\" was founded in 1976 in Blagoevgrad. It is among the leading classical universities in the country.",
     accreditation:
-      "The university is accredited with the maximum score by the National Evaluation and Accreditation Agency, which guarantees the quality of education in 81 bachelor and master programs after secondary education, 153 master programs after higher education, and 83 doctoral programs.",
+      "With its 45-year history, the Southwestern University of the Republic of Bulgaria “Neofit Rilski” has won its place in the scientific and educational space of Bulgaria and Southeastern Europe. The university is accredited with the maximum rating by the National Agency for Assessment and Accreditation, which is a guarantee of the quality of the educational service in 81 bachelor's and master's programs after secondary education, 153 master's programs after completed higher education and 83 doctoral programs. Education is conducted in 30 professional areas in the fields of humanitarian, technical, natural, management, social, pedagogical, legal and economic sciences, arts, healthcare, public health and sports, security and defense, etc. According to this indicator, the university is in first place in the country.",
     fields:
       "Education is conducted in 30 professional fields in the humanities, technical, natural, management, social, pedagogical, legal and economic sciences, arts, healthcare, public health and sports, security and defense, etc. By this measure, the university ranks first in the country.",
     address: "66 Ivan Mihailov St., Blagoevgrad 2700, Bulgaria",
     history:
-      "The university in Blagoevgrad, whose patron is the patriarch of modern Bulgarian education Neofit Rilski, began its history as a branch of Sofia University “St. Kliment Ohridski” by Order No. 323 of August 9, 1975, of the Bureau of the Council of Ministers (State Gazette, No. 65 of 1975). The first 200 students were admitted in the 1976/1977 academic year in two specialties – “Pedagogy for training kindergarten teachers” and “Pedagogy for training primary school teachers”. Thus, for the first time in Bulgaria, university education for kindergarten and primary school teachers began. The education was provided by three professors, two associate professors and thirteen assistants.",
+      "The University of Blagoevgrad, whose patron is the patriarch of modern Bulgarian education Neofit Rilski, began its history as a branch of the Sofia University \"St. Kliment Ohridski\" with Order No. 323 of August 9, 1975 of the Bureau of the Council of Ministers (State Gazette, issue 65 of 1975). The first 200 students were admitted in the academic year 1976/1977 in two specialties - \"Pedagogy for the preparation of teachers in kindergartens\" and \"Pedagogy for the preparation of primary school teachers\". Thus, for the first time in Bulgaria, university education for teachers in kindergartens and primary schools began. The training was carried out by three professors, two associate professors and thirteen assistants.",
     campus: "Explore the university:",
     logos: "South-West University \"Neofit Rilski\" and Technical Faculty",
   },
@@ -66,7 +70,6 @@ export default function Home() {
 
   return (
     <main>
-      {/* Слайдер вынесен на уровень выше для поддержки полной ширины */}
       <section class="hero-container">
         <button class="slider-btn prev" onClick={prev} aria-label="Previous image">
           ‹
@@ -95,26 +98,25 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Контент страницы ограничен по ширине */}
       <div class="page">
         <Title>{t().title}</Title>
         <h1>{t().welcome}</h1>
         <p>{t().desc}</p>
 
         <section class="univInfo">
-          <div class="univBlock">
-            <h2>{t().sectionTitle1}</h2>
-            <p>{t().highlight}</p>
+          <div class="univBlock univBlock--history">
+            <h2>{t().sectionTitle3}</h2>
+            <p>{t().history}</p>
           </div>
 
-          <div class="univBlock">
+          <div class="univBlock univBlock--accreditation">
             <h2>{t().sectionTitle2}</h2>
             <p>{t().accreditation}</p>
           </div>
 
-          <div class="univBlock">
-            <h2>{t().sectionTitle3}</h2>
-            <p>{t().history}</p>
+          <div class="univBlock univBlock--about">
+            <h2>{t().sectionTitle1}</h2>
+            <p>{t().highlight}</p>
           </div>
         </section>
 
@@ -125,6 +127,7 @@ export default function Home() {
               Технически Факултет
             </span>
           </div>
+          <p class="creatorNote">{t().creatorNote}</p>
         </footer>
       </div>
     </main>
