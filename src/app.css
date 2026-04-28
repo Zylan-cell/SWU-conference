@@ -143,6 +143,57 @@ a:hover {
   line-height: 1.2;
 }
 
+.welcome-header {
+  margin-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.welcome-line {
+  line-height: 1.2;
+}
+
+.welcome-line.line-0 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+
+.welcome-line.line-1 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.welcome-line.line-2 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.welcome-line.line-3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-top: 0.25rem;
+}
+
+.welcome-desc {
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.welcome-desc p {
+  margin: 1rem 0;
+  line-height: 1.7;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
 .page p {
   margin: 1rem auto;
   line-height: 1.7;
@@ -443,6 +494,35 @@ a:hover {
   border: 0;
 }
 
+.map-loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  color: var(--muted);
+  z-index: 1;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
 @media (max-width: 1024px) {
   .site-header {
     padding: 0.9rem 1rem;
@@ -580,6 +660,22 @@ a:hover {
   .page h1 {
     font-size: clamp(1.85rem, 7vw, 2.2rem);
     margin-bottom: 1rem;
+  }
+
+  .welcome-line.line-0 {
+    font-size: clamp(1.4rem, 6vw, 1.8rem);
+  }
+
+  .welcome-line.line-1 {
+    font-size: clamp(1.1rem, 5vw, 1.3rem);
+  }
+
+  .welcome-line.line-2 {
+    font-size: 0.95rem;
+  }
+
+  .welcome-line.line-3 {
+    font-size: 1rem;
   }
 
   .page p {

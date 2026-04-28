@@ -1,0 +1,35 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import content from '../../i18n/en/pages.json';
+---
+
+<Layout title={content.authors.title}>
+	<main class="page authors-page">
+		<h1>{content.authors.title}</h1>
+
+		<div class="authors-content">
+			<p>{content.authors.intro}</p>
+			<p>{content.authors.requirements}</p>
+
+			<h2>{content.authors.formatsTitle}</h2>
+			<div class="authors-downloads">
+				<a class="authors-download" href={content.authors.conferenceTemplateUrl} target="_blank" rel="noopener">
+					{content.authors.downloadLabel} <span>{content.authors.formatConference}</span>
+				</a>
+				<a class="authors-download" href={content.authors.journalTemplateUrl} target="_blank" rel="noopener">
+					{content.authors.downloadLabel} <span>{content.authors.formatJournal}</span>
+				</a>
+			</div>
+
+			<p>{content.authors.files}</p>
+			<p>{content.authors.confirmation}</p>
+			<p>{content.authors.responsibility}</p>
+
+			<h2>{content.authors.reviewTitle}</h2>
+			<p>{content.authors.reviewProcess}</p>
+			<p>{content.authors.reviewDecision}</p>
+			<p>{content.authors.participation}</p>
+			<p>{content.authors.journal}</p>
+		</div>
+	</main>
+</Layout>

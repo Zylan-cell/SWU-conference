@@ -1,0 +1,11 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import content from '../../i18n/en/pages.json';
+---
+
+<Layout title={content.topics.title}>
+	<main class="page">
+		<h1>{content.topics.title}</h1>
+		<p>{content.topics.desc}</p>
+	</main>
+</Layout>

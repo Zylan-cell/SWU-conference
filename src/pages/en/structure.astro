@@ -1,0 +1,44 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import content from '../../i18n/en/structure.json';
+---
+
+<Layout title={content.title}>
+	<main class="page">
+		<h1>{content.title}</h1>
+		<p>
+			<strong>{content.conferenceName}</strong>
+		</p>
+
+		<section class="section">
+			<h2>{content.president}</h2>
+		</section>
+
+		<details class="details">
+			<summary class="detailsSummary">{content.cochairsTitle}</summary>
+			<ul class="detailsList">
+				{content.cochairs.map((name) => (
+					<li>{name}</li>
+				))}
+			</ul>
+		</details>
+
+		<details class="details">
+			<summary class="detailsSummary">{content.orgCommitteeTitle}</summary>
+			<ul class="detailsList">
+				{content.orgCommitteeMembers.map((name) => (
+					<li>{name}</li>
+				))}
+			</ul>
+		</details>
+
+		<details class="details">
+			<summary class="detailsSummary">{content.programCommitteeTitle}</summary>
+			<ul class="detailsList">
+				{content.programCommitteeMembers.map((name) => (
+					<li>{name}</li>
+				))}
+			</ul>
+		</details>
+	</main>
+</Layout>

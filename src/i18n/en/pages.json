@@ -1,0 +1,30 @@
+{
+  "topics": {
+    "title": "Main Topics of the Conference",
+    "desc": "Here are the main topics of the conference."
+  },
+  "authors": {
+    "title": "For Authors",
+    "intro": "Authors are invited to submit original, previously unpublished scientific papers that are not currently under review by other conferences or journals. All papers should be submitted through the conference website, with the relevant section indicated for the proposed work.",
+    "requirements": "Authors must use the official conference template and follow the requirements for structure, style, and formatting. The recommended length is from 2 to 4 pages, including figures, tables, and bibliography.",
+    "formatsTitle": "Submission Formats",
+    "formatConference": "for conference proceedings",
+    "formatJournal": "for an English-language journal",
+    "downloadLabel": "DOWNLOAD",
+    "files": "Manuscripts can be prepared in Bulgarian or English and should be submitted in PDF format.",
+    "confirmation": "After submission, please check your email for an automatic confirmation of receipt.",
+    "responsibility": "Authors are fully responsible for the accuracy of the submitted data and for ensuring that the manuscript complies with all technical requirements.",
+    "reviewTitle": "Review and Acceptance",
+    "reviewProcess": "All papers will go through a double-blind review process by independent experts.",
+    "reviewDecision": "The final decision (acceptance / rejection / revision) will be communicated to the authors by email.",
+    "participation": "For an accepted paper to be included in the conference proceedings, at least one of the authors must present the work during the event.",
+    "journal": "A selection of the conference presentations will be published in the E+E journal.",
+    "conferenceTemplateUrl": "https://docs.google.com/document/d/1XqjVlMPQSPg9m_hVJXXcIiLOcl6Immnw/edit?usp=sharing&ouid=106724579998279197746&rtpof=true&sd=true",
+    "journalTemplateUrl": "https://docs.google.com/document/d/1TbCEHw6kSxCweDt8GQgojXRjKBeas62-/edit?usp=drive_link&ouid=106724579998279197746&rtpof=true&sd=true"
+  },
+  "location": {
+    "title": "Location",
+    "address": "66 Ivan Mihailov St., Blagoevgrad 2700",
+    "mapHint": "See the campus map below."
+  }
+}

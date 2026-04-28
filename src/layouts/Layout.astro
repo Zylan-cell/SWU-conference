@@ -1,0 +1,92 @@
+---
+import { getLangFromUrl, useTranslations, useRelativePath } from '../i18n/utils';
+import logoUniv from '../../images/swu.png';
+import logoTech from '../../images/technical.png';
+import '../app.css';
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const rel = useRelativePath(Astro.url);
+---
+
+<!doctype html>
+<html lang={lang}>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Conference Website" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<header class="site-header">
+			<nav class="site-nav">
+				<a class="navLink" href={rel('/')}>{t('nav.home')}</a>
+				<a class="navLink" href={rel('/structure')}>{t('nav.structure')}</a>
+				<a class="navLink" href={rel('/topics')}>{t('nav.topics')}</a>
+
+				<img class="navLogo navLogoBig" src={logoUniv.src} alt="SWU logo" />
+
+				<a class="navLink" href={rel('/authors')}>{t('nav.authors')}</a>
+				<a class="navLink" href={rel('/location')}>{t('nav.location')}</a>
+				<a
+					class="navLink navLinkAccent"
+					href="https://docs.google.com/forms/d/e/1FAIpQLScX2LXIdVwF6hW1FGtUdVBVC6rhiPOtOpc9YypDN0oPOiltpA/viewform?usp=header"
+					target="_blank"
+					rel="noopener"
+				>
+					{t('nav.submit')}
+				</a>
+			</nav>
+			<div class="lang-switch">
+				<div class="lang-buttons">
+					<a href={Astro.url.pathname.replace('/en/', '/')} class={lang === 'bg' ? 'active' : ''}>BG</a>
+					<a href={Astro.url.pathname.startsWith('/university/en/') ? Astro.url.pathname : Astro.url.pathname.replace('/university/', '/university/en/')} class={lang === 'en' ? 'active' : ''}>EN</a>
+				</div>
+			</div>
+		</header>
+		
+		<slot />
+
+		<footer class="logoBar">
+			<div class="separator">
+				<span class="separatorLabel">
+					<img src={logoTech.src} alt="Technical faculty logo" />
+					{t('faculty.name')}
+				</span>
+			</div>
+			<p class="creatorNote">{t('footer.creator')}</p>
+		</footer>
+	</body>
+</html>
+
+<style is:global>
+	.lang-buttons {
+		display: flex;
+		gap: 0.25rem;
+		background: #fff;
+		border: 1px solid var(--border);
+		border-radius: 999px;
+		padding: 0.25rem;
+	}
+
+	.lang-buttons a {
+		padding: 0.4rem 0.8rem;
+		border-radius: 999px;
+		font-weight: 600;
+		font-size: 0.85rem;
+		color: var(--muted);
+		transition: all 0.2s ease;
+	}
+
+	.lang-buttons a.active {
+		background: var(--text);
+		color: #fff;
+	}
+</style>

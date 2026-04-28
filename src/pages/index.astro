@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HomeSlider from '../components/HomeSlider.astro';
+import homeContent from '../i18n/bg/home.json';
+---
+
+<Layout title={homeContent.title}>
+	<main>
+		<HomeSlider />
+
+		<div class="page">
+			<div class="welcome-header">
+				{homeContent.welcome.map((line, i) => (
+					<div class={`welcome-line line-${i}`}>{line}</div>
+				))}
+			</div>
+			<div class="welcome-desc">
+				{homeContent.desc.split("\n").map((line) =>
+					line.trim() === "" ? <br /> : <p>{line}</p>
+				)}
+			</div>
+		</div>
+	</main>
+</Layout>

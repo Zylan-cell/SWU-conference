@@ -1,19 +1,15 @@
 {
-  "name": "example-basic",
+  "name": "conference-website-astro",
   "type": "module",
   "scripts": {
-    "dev": "vite dev",
-    "build": "vite build",
-    "preview": "vite preview"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "@solidjs/meta": "^0.29.4",
-    "@solidjs/router": "^0.15.0",
-    "solid-js": "^1.9.5",
-    "vite": "^7.0.0"
-  },
-  "devDependencies": {
-    "vite-plugin-solid": "^2.11.9"
+    "astro": "^5.0.0"
   },
   "engines": {
     "node": ">=22"

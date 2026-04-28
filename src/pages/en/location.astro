@@ -1,0 +1,33 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import content from '../../i18n/en/pages.json';
+---
+
+<Layout title={content.location.title}>
+	<main class="page">
+		<h1>{content.location.title}</h1>
+
+		<section class="locationBlocks">
+			<article class="locationText">
+				<p>
+					<strong>{content.location.address}</strong>
+				</p>
+				<p>{content.location.mapHint}</p>
+			</article>
+
+			<article class="locationMap">
+				<div class="map-loader" id="map-loader">
+					<div class="spinner"></div>
+				</div>
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2964.1544461354665!2d23.0749929755676!3d42.018419056617866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14aaf5f5bcb8e9cf%3A0x9dfcd08ef61c0444!2z0K7Qs9C-0LfQsNC_0LDQtNC10L0g0YPQvdC40LLQtdGA0YHQuNGC0LXRgiDigJ7QndC10L7RhNC40YIg0KDQuNC70YHQutC44oCc!5e0!3m2!1sru!2sbg!4v1773836632145!5m2!1sru!2sbg"
+					loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade"
+					allowfullscreen
+					class="mapIframe"
+					onload="document.getElementById('map-loader').style.display='none'"
+				/>
+			</article>
+		</section>
+	</main>
+</Layout>

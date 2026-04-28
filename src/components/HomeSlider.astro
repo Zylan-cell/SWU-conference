@@ -1,0 +1,85 @@
+---
+import campus1 from '../../images/1.jpg';
+import campus2 from '../../images/2.jpg';
+import campus3 from '../../images/3.jpg';
+import campus4 from '../../images/4.jpg';
+
+const images = [campus1, campus2, campus3, campus4];
+---
+
+<section class="hero-container">
+    <button class="slider-btn prev" id="slider-prev" aria-label="Previous image">‹</button>
+
+    <div class="slider-track" id="slider-track">
+        {images.map((img, index) => (
+            <div class="slide-full">
+                <img src={img.src} alt="University campus" loading={index === 0 ? "eager" : "lazy"} />
+            </div>
+        ))}
+    </div>
+
+    <button class="slider-btn next" id="slider-next" aria-label="Next image">›</button>
+
+    <div class="slider-dots" id="slider-dots">
+        {images.map((_, index) => (
+            <button
+                class={"dot" + (index === 0 ? " active" : "")}
+                data-index={index}
+                aria-label={`Go to image ${index + 1}`}
+            />
+        ))}
+    </div>
+</section>
+
+<script>
+    const track = document.getElementById('slider-track');
+    const prevBtn = document.getElementById('slider-prev');
+    const nextBtn = document.getElementById('slider-next');
+    const dots = document.querySelectorAll('#slider-dots .dot');
+    const slidesCount = 4;
+    let current = 0;
+
+    function updateSlider() {
+        if (!track) return;
+        track.style.transform = `translateX(-${current * 100}%)`;
+        
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === current);
+        });
+    }
+
+    function next() {
+        current = (current + 1) % slidesCount;
+        updateSlider();
+    }
+
+    function prev() {
+        current = (current - 1 + slidesCount) % slidesCount;
+        updateSlider();
+    }
+
+    prevBtn?.addEventListener('click', () => {
+        prev();
+        resetInterval();
+    });
+
+    nextBtn?.addEventListener('click', () => {
+        next();
+        resetInterval();
+    });
+
+    dots.forEach(dot => {
+        dot.addEventListener('click', (e) => {
+            current = parseInt((e.target as HTMLElement).getAttribute('data-index') || '0');
+            updateSlider();
+            resetInterval();
+        });
+    });
+
+    let interval = setInterval(next, 5000);
+
+    function resetInterval() {
+        clearInterval(interval);
+        interval = setInterval(next, 5000);
+    }
+</script>
