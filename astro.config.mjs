@@ -1,8 +1,8 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://university.github.io',
-  base: '/university', // Matching current basePath
+  site: 'https://zylan-cell.github.io',
+  base: '/SWU-conference',
   output: 'static',
   i18n: {
     defaultLocale: 'bg',

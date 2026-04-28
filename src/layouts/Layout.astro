@@ -47,7 +47,7 @@ const rel = useRelativePath(Astro.url);
 			<div class="lang-switch">
 				<div class="lang-buttons">
 					<a href={Astro.url.pathname.replace('/en/', '/')} class={lang === 'bg' ? 'active' : ''}>BG</a>
-					<a href={Astro.url.pathname.startsWith('/university/en/') ? Astro.url.pathname : Astro.url.pathname.replace('/university/', '/university/en/')} class={lang === 'en' ? 'active' : ''}>EN</a>
+					<a href={Astro.url.pathname.includes('/en/') ? Astro.url.pathname : Astro.url.pathname.replace(import.meta.env.BASE_URL.replace(/\/$/, ''), import.meta.env.BASE_URL.replace(/\/$/, '') + '/en')} class={lang === 'en' ? 'active' : ''}>EN</a>
 				</div>
 			</div>
 		</header>
