@@ -2,6 +2,9 @@
 import { getLangFromUrl, useTranslations, useRelativePath } from '../i18n/utils';
 import logoUniv from '../../images/swu.png';
 import logoTech from '../../images/technical.png';
+import logoRS from '../../images/rs.png';
+import logoWE from '../../images/we.png';
+import logoABB from '../../images/abb.png';
 import '../app.css';
 
 interface Props {
@@ -55,7 +58,13 @@ const rel = useRelativePath(Astro.url);
 		<slot />
 
 		<footer class="logoBar">
-			<div class="separator">
+			<div class="separator" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+				<span style="display: flex; align-items: center; gap: 1rem; font-weight: 600; color: var(--text);">
+					<span>{t('partners')}</span>
+					<img src={logoRS.src} alt="RS logo" style="height: 32px; object-fit: contain;" />
+					<img src={logoWE.src} alt="WE logo" style="height: 32px; object-fit: contain;" />
+					<img src={logoABB.src} alt="ABB logo" style="height: 32px; object-fit: contain;" />
+				</span>
 				<span class="separatorLabel">
 					<img src={logoTech.src} alt="Technical faculty logo" />
 					{t('faculty.name')}

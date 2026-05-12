@@ -14,7 +14,8 @@ export const ui = {
     'nav.location': 'Местоположение',
     'nav.submit': 'Изпрати статия',
     'footer.creator': 'Сайтът е създаден от Тимофий Пригуза, студент в ЮЗУ "Неофит Рилски", специалност ИКТ, 4 курс бакалавър (към момента).',
-    'faculty.name': 'Технически Факултет'
+    'faculty.name': 'Технически Факултет',
+    'partners': 'Партньори от индустрията'
   },
   en: {
     'nav.home': 'Home',
@@ -24,6 +25,7 @@ export const ui = {
     'nav.location': 'Location',
     'nav.submit': 'Submit Article',
     'footer.creator': 'This website was created by Timofiy Prihuza, a 4th-year bachelor student (at the time) in ICT at South-West University "Neofit Rilski".',
-    'faculty.name': 'Technical Faculty'
+    'faculty.name': 'Technical Faculty',
+    'partners': 'Industry Partners'
   },
 } as const;
