@@ -158,50 +158,6 @@ a:hover {
   pointer-events: none;
 }
 
-.pdf-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 760px;
-  margin: 0 auto;
-  gap: 1rem;
-}
-
-.pdf-download-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.88rem;
-  font-weight: 600;
-  color: var(--primary);
-  text-decoration: none;
-  padding: 0.5rem 0.85rem;
-  border-radius: 6px;
-  background: rgba(37, 99, 235, 0.06);
-  border: 1px solid rgba(37, 99, 235, 0.12);
-  transition: all 0.2s ease;
-  white-space: nowrap;
-}
-
-.pdf-download-link:hover {
-  background: rgba(37, 99, 235, 0.12);
-  border-color: rgba(37, 99, 235, 0.2);
-  transform: translateY(-1px);
-  color: var(--primary-hover);
-}
-
-.pdf-download-link:active {
-  transform: translateY(0);
-}
-
-.download-icon {
-  transition: transform 0.2s ease;
-}
-
-.pdf-download-link:hover .download-icon {
-  transform: translateY(1px);
-}
-
 .navLink {
   padding: 0.5rem 1rem;
   border-radius: 999px;
@@ -1039,17 +995,6 @@ a:hover {
     padding: 0.5rem 0.4rem !important;
     font-size: 0.75rem !important;
     border-radius: 6px !important;
-  }
-
-  .pdf-header {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    gap: 0.75rem !important;
-  }
-
-  .pdf-download-link {
-    width: 100% !important;
-    justify-content: center !important;
   }
 
   .page {
