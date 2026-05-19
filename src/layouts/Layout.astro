@@ -24,18 +24,22 @@ const rel = useRelativePath(Astro.url);
 		<meta charset="UTF-8" />
 		<meta name="description" content="Conference Website" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/x-icon" href={import.meta.env.BASE_URL.replace(/\/$/, '') + "/favicon.ico"} />
+		<link rel="icon" type="image/png" href={logoUniv.src} />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
 	<body>
 		<header class="site-header">
+			<a href={rel('/')} class="mobile-logo-link">
+				<img class="navLogo mobile-logo" src={logoUniv.src} alt="SWU logo" />
+			</a>
+
 			<nav class="site-nav">
 				<a class="navLink" href={rel('/')}>{t('nav.home')}</a>
 				<a class="navLink" href={rel('/structure')}>{t('nav.structure')}</a>
-				<a class="navLink" href={rel('/topics')}>{t('nav.topics')}</a>
+				<a class="navLink" href={rel('/program')}>{t('nav.program')}</a>
 
-				<img class="navLogo navLogoBig" src={logoUniv.src} alt="SWU logo" />
+				<img class="navLogo navLogoBig desktop-logo" src={logoUniv.src} alt="SWU logo" />
 
 				<a class="navLink" href={rel('/authors')}>{t('nav.authors')}</a>
 				<a class="navLink" href={rel('/location')}>{t('nav.location')}</a>
@@ -59,14 +63,16 @@ const rel = useRelativePath(Astro.url);
 		<slot />
 
 		<footer class="logoBar">
-			<div class="separator" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
-				<span style="display: flex; align-items: center; gap: 1rem; font-weight: 600; color: var(--text);">
-					<span>{t('partners')}</span>
-					<img src={logoRS.src} alt="RS logo" style="height: 32px; object-fit: contain;" />
-					<img src={logoWE.src} alt="WE logo" style="height: 32px; object-fit: contain;" />
-					<img src={logoABB.src} alt="ABB logo" style="height: 32px; object-fit: contain;" />
-					<img src={LogoOttobock.src} alt="Ottobock logo" style="height: 32px; object-fit: contain;" />
-				</span>
+			<div class="separator footer-separator">
+				<div class="partners-row">
+					<span class="partners-title">{t('partners')}</span>
+					<div class="partners-logos">
+						<img src={logoRS.src} alt="RS logo" class="partner-logo" />
+						<img src={logoWE.src} alt="WE logo" class="partner-logo" />
+						<img src={logoABB.src} alt="ABB logo" class="partner-logo" />
+						<img src={LogoOttobock.src} alt="Ottobock logo" class="partner-logo" />
+					</div>
+				</div>
 				<span class="separatorLabel">
 					<img src={logoTech.src} alt="Technical faculty logo" />
 					{t('faculty.name')}

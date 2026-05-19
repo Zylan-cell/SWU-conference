@@ -1,7 +1,7 @@
 {
-  "topics": {
-    "title": "Main Topics of the Conference",
-    "desc": "Here are the main topics of the conference."
+  "program": {
+    "title": "Conference Program",
+    "desc": "View the full conference program and schedule below."
   },
   "authors": {
     "title": "For Authors",

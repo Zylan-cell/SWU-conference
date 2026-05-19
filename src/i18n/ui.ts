@@ -9,7 +9,7 @@ export const ui = {
   bg: {
     'nav.home': 'Начало',
     'nav.structure': 'Организационна структура',
-    'nav.topics': 'Основни теми',
+    'nav.program': 'Програма',
     'nav.authors': 'За авторите',
     'nav.location': 'Местоположение',
     'nav.submit': 'Изпрати статия',
@@ -20,7 +20,7 @@ export const ui = {
   en: {
     'nav.home': 'Home',
     'nav.structure': 'Organization Structure',
-    'nav.topics': 'Main Topics',
+    'nav.program': 'Program',
     'nav.authors': 'For Authors',
     'nav.location': 'Location',
     'nav.submit': 'Submit Article',
