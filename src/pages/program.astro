@@ -2,8 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import content from '../i18n/bg/pages.json';
 
-const pdfUrl = "https://drive.google.com/file/d/1FekOsToGQeDAVaDk-HoU8pw_k4T85js4/preview";
-const fullUrl = "https://drive.google.com/file/d/1FekOsToGQeDAVaDk-HoU8pw_k4T85js4/view?usp=drive_link";
+const pdfUrl = import.meta.env.BASE_URL.replace(/\/$/, '') + "/program.pdf";
 ---
 
 <Layout title={content.program.title}>
