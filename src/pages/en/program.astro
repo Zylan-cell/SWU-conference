@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import content from '../../i18n/en/pages.json';
+import PhotoGallery from '../../components/PhotoGallery.astro';
 
 const pdfUrl = import.meta.env.BASE_URL.replace(/\/$/, '') + "/program.pdf#navpanes=0";
 ---
@@ -24,5 +25,8 @@ const pdfUrl = import.meta.env.BASE_URL.replace(/\/$/, '') + "/program.pdf#navpa
 				onload="this.parentNode.querySelector('.pdf-loader').style.display='none'"
 			></iframe>
 		</div>
+
+		<!-- Photo gallery inserted at the bottom of the program page -->
+		<PhotoGallery />
 	</main>
 </Layout>

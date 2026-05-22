@@ -1,0 +1,270 @@
+---
+const photos = [
+  "viber_image_2026-05-20_12-48-35-218.jpg",
+  "viber_image_2026-05-20_12-48-35-321.jpg",
+  "viber_image_2026-05-20_12-48-35-443.jpg",
+  "viber_image_2026-05-20_12-48-35-589.jpg",
+  "viber_image_2026-05-20_12-48-42-642.jpg",
+  "viber_image_2026-05-20_12-48-50-992.jpg",
+  "viber_image_2026-05-20_12-49-07-643.jpg",
+  "viber_image_2026-05-20_12-49-08-176.jpg",
+  "viber_image_2026-05-20_12-49-08-485.jpg",
+  "viber_image_2026-05-20_12-49-08-742.jpg",
+  "viber_image_2026-05-20_12-49-16-940.jpg",
+  "viber_image_2026-05-20_12-49-17-266.jpg",
+  "viber_image_2026-05-20_12-49-45-446.jpg",
+  "viber_image_2026-05-20_12-49-51-308.jpg",
+  "viber_image_2026-05-20_12-49-51-953.jpg",
+  "viber_image_2026-05-20_12-49-52-686.jpg",
+  "viber_image_2026-05-20_12-50-36-346.jpg",
+  "viber_image_2026-05-20_12-50-36-507.jpg",
+  "viber_image_2026-05-20_12-50-36-614.jpg",
+  "viber_image_2026-05-20_13-27-13-951.jpg",
+  "viber_image_2026-05-20_13-35-34-278.jpg",
+  "viber_image_2026-05-20_14-12-22-352.jpg",
+  "viber_image_2026-05-20_14-26-43-993.jpg",
+  "viber_image_2026-05-20_14-38-31-540.jpg",
+  "viber_image_2026-05-20_14-38-32-203.jpg",
+  "viber_image_2026-05-20_14-38-32-286.jpg",
+  "viber_image_2026-05-20_14-38-32-409.jpg",
+  "viber_image_2026-05-20_14-38-32-440.jpg",
+  "viber_image_2026-05-20_14-38-32-507.jpg",
+  "viber_image_2026-05-20_14-38-32-620.jpg",
+  "viber_image_2026-05-20_14-38-35-882.jpg",
+  "viber_image_2026-05-20_14-38-35-912.jpg",
+  "viber_image_2026-05-20_14-38-35-954.jpg",
+  "viber_image_2026-05-20_14-38-35-973.jpg",
+  "viber_image_2026-05-20_14-38-35-987.jpg",
+  "viber_image_2026-05-20_14-38-45-347.jpg",
+  "viber_image_2026-05-20_14-38-45-394.jpg",
+  "viber_image_2026-05-20_14-38-45-419.jpg",
+  "viber_image_2026-05-20_14-38-45-453.jpg",
+  "viber_image_2026-05-20_14-38-45-482.jpg",
+  "viber_image_2026-05-20_14-38-45-512.jpg",
+  "viber_image_2026-05-20_14-38-45-568.jpg",
+  "viber_image_2026-05-20_14-38-45-591.jpg",
+  "viber_image_2026-05-20_14-38-45-625.jpg",
+  "viber_image_2026-05-20_14-38-46-104.jpg",
+  "viber_image_2026-05-20_14-38-46-139.jpg",
+  "viber_image_2026-05-20_14-38-46-161.jpg",
+  "viber_image_2026-05-20_14-39-26-398.jpg",
+  "viber_image_2026-05-20_14-39-27-685.jpg",
+  "viber_image_2026-05-20_14-39-27-725.jpg",
+  "viber_image_2026-05-20_14-39-27-753.jpg",
+  "viber_image_2026-05-20_14-39-27-773.jpg",
+  "viber_image_2026-05-20_14-39-27-791.jpg",
+  "viber_image_2026-05-20_14-39-27-818.jpg",
+  "viber_image_2026-05-20_14-39-27-838.jpg",
+  "viber_image_2026-05-20_14-39-27-855.jpg",
+  "viber_image_2026-05-20_14-39-27-871.jpg",
+  "viber_image_2026-05-20_14-39-27-890.jpg",
+  "viber_image_2026-05-20_14-39-27-917.jpg",
+  "viber_image_2026-05-20_14-39-27-931.jpg",
+  "viber_image_2026-05-20_14-39-27-948.jpg",
+  "viber_image_2026-05-20_14-39-27-963.jpg",
+  "viber_image_2026-05-20_14-41-02-487.jpg",
+  "viber_image_2026-05-20_14-41-02-539.jpg",
+  "viber_image_2026-05-20_14-41-02-576.jpg",
+  "viber_image_2026-05-20_14-41-02-670.jpg",
+  "viber_image_2026-05-20_14-41-02-732.jpg",
+  "viber_image_2026-05-20_14-41-02-923.jpg",
+  "viber_image_2026-05-20_14-41-03-278.jpg",
+  "viber_image_2026-05-20_14-41-04-790.jpg",
+  "viber_image_2026-05-20_14-41-04-816.jpg",
+  "viber_image_2026-05-20_14-41-04-847.jpg",
+  "viber_image_2026-05-20_14-41-04-872.jpg",
+  "viber_image_2026-05-20_14-41-04-898.jpg",
+  "viber_image_2026-05-20_14-41-04-947.jpg",
+  "viber_image_2026-05-20_14-41-05-916.jpg",
+  "viber_image_2026-05-20_14-41-05-953.jpg",
+  "viber_image_2026-05-20_14-41-06-402.jpg",
+  "viber_image_2026-05-20_14-41-08-498.jpg",
+  "viber_image_2026-05-20_14-41-09-720.jpg",
+  "viber_image_2026-05-20_14-41-09-746.jpg",
+  "viber_image_2026-05-20_14-41-09-928.jpg",
+  "viber_image_2026-05-20_14-41-09-992.jpg",
+  "viber_image_2026-05-20_14-41-10-065.jpg",
+  "viber_image_2026-05-20_14-41-10-141.jpg",
+  "viber_image_2026-05-20_14-41-10-172.jpg",
+  "viber_image_2026-05-20_14-41-10-232.jpg",
+  "viber_image_2026-05-20_14-41-10-853.jpg",
+  "viber_image_2026-05-20_14-41-10-888.jpg",
+  "viber_image_2026-05-20_14-41-11-027.jpg",
+  "viber_image_2026-05-20_14-41-11-083.jpg",
+  "viber_image_2026-05-20_14-41-11-113.jpg",
+  "viber_image_2026-05-20_14-41-11-210.jpg",
+  "viber_image_2026-05-20_15-27-58-163.jpg",
+  "viber_image_2026-05-20_15-42-27-215.jpg",
+  "viber_image_2026-05-20_15-54-38-554.jpg",
+  "viber_image_2026-05-20_22-18-37-215.jpg"
+];
+
+const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<div class="gallery-grid" id="gallery">
+  {photos.map((photo, index) => (
+    <div class="gallery-item" data-index={index}>
+      <img 
+        src={`${baseUrl}/photos/${photo}`} 
+        alt={`Conference photo ${index + 1}`} 
+        loading="lazy" 
+        decoding="async"
+      />
+    </div>
+  ))}
+</div>
+
+<!-- Lightbox Overlay -->
+<div id="lightbox" class="lightbox">
+  <span class="close">&times;</span>
+  <span class="prev">&#10094;</span>
+  <span class="next">&#10095;</span>
+  <div class="lightbox-content">
+    <img id="lightbox-img" src="" alt="Enlarged photo" />
+  </div>
+</div>
+
+<style>
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+    padding: 1rem 0;
+  }
+
+  .gallery-item {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+    background: #eee;
+  }
+
+  .gallery-item:hover {
+    transform: scale(1.02);
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Lightbox Styles */
+  .lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    user-select: none;
+  }
+
+  .lightbox-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  .lightbox-content img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+  }
+
+  .close, .prev, .next {
+    position: absolute;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1010;
+    padding: 20px;
+    transition: color 0.3s;
+  }
+
+  .close:hover, .prev:hover, .next:hover {
+    color: #ccc;
+  }
+
+  .close { top: 10px; right: 25px; }
+  .prev { top: 50%; left: 10px; transform: translateY(-50%); }
+  .next { top: 50%; right: 10px; transform: translateY(-50%); }
+</style>
+
+<script>
+  const gallery = document.getElementById('gallery');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img') as HTMLImageElement;
+  const closeBtn = document.querySelector('.close');
+  const prevBtn = document.querySelector('.prev');
+  const nextBtn = document.querySelector('.next');
+  
+  let currentIndex = 0;
+  const items = document.querySelectorAll('.gallery-item');
+  const images = Array.from(items).map(item => item.querySelector('img')?.getAttribute('src') || '');
+
+  function showImage(index: number) {
+    if (index < 0) index = images.length - 1;
+    if (index >= images.length) index = 0;
+    currentIndex = index;
+    lightboxImg.src = images[currentIndex];
+    if (lightbox) lightbox.style.display = 'block';
+    document.body.style.overflow = 'hidden'; // Prevent scroll
+  }
+
+  items.forEach((item, index) => {
+    item.addEventListener('click', () => showImage(index));
+  });
+
+  closeBtn?.addEventListener('click', () => {
+    if (lightbox) lightbox.style.display = 'none';
+    document.body.style.overflow = '';
+  });
+
+  prevBtn?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    showImage(currentIndex - 1);
+  });
+
+  nextBtn?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    showImage(currentIndex + 1);
+  });
+
+  lightbox?.addEventListener('click', () => {
+    if (lightbox) lightbox.style.display = 'none';
+    document.body.style.overflow = '';
+  });
+
+  lightboxImg?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    // Simple zoom toggle
+    if (lightboxImg.style.transform === 'scale(1.5)') {
+      lightboxImg.style.transform = 'scale(1)';
+      lightboxImg.style.cursor = 'zoom-in';
+    } else {
+      lightboxImg.style.transform = 'scale(1.5)';
+      lightboxImg.style.cursor = 'zoom-out';
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (lightbox?.style.display === 'block') {
+      if (e.key === 'Escape') closeBtn?.dispatchEvent(new Event('click'));
+      if (e.key === 'ArrowLeft') prevBtn?.dispatchEvent(new Event('click'));
+      if (e.key === 'ArrowRight') nextBtn?.dispatchEvent(new Event('click'));
+    }
+  });
+</script>
